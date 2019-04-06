@@ -30,3 +30,11 @@ See wiki for more information: https://github.com/notro/fbtft/wiki
 
 
 Source: https://github.com/notro/fbtft/
+
+Connect
+spi0 [CE0]
+dc 24
+reset 25
+led 18
+Capacitive touch I2C
+touch interupt 4
