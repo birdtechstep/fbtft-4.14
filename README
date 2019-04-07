@@ -31,10 +31,21 @@ See wiki for more information: https://github.com/notro/fbtft/wiki
 
 Source: https://github.com/notro/fbtft/
 
-Connect
+# Connect
 spi0 [CE0]
 dc 24
 reset 25
 led 18
 Capacitive touch I2C
 touch interupt 4
+
+
+### Force the screen to stay on
+
+
+sudo nano /etc/lightdm/lightdm.conf
+Add the following lines to the [SeatDefaults] section:
+
+
+# don't sleep the screen
+xserver-command=X -s 0 dpms -nocursor
