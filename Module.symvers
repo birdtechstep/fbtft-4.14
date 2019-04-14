@@ -13,7 +13,6 @@
 0x8f529ed3	fbtft_write_spi	drivers/staging/fbtft/fbtft	EXPORT_SYMBOL
 0xd24932c1	fbtft_register_framebuffer	drivers/staging/fbtft/fbtft	EXPORT_SYMBOL
 0xaaf018d4	fbtft_write_spi_emulate_9	drivers/staging/fbtft/fbtft	EXPORT_SYMBOL
-0x2cd79483	fbtft_write_vmem18_bus8	drivers/staging/fbtft/fbtft	EXPORT_SYMBOL
 0x0114810a	fbtft_write_vmem16_bus8	drivers/staging/fbtft/fbtft	EXPORT_SYMBOL
 0x4cddb470	fbtft_write_vmem16_bus9	drivers/staging/fbtft/fbtft	EXPORT_SYMBOL
 0xea59619e	fbtft_write_gpio16_wr_latched	drivers/staging/fbtft/fbtft	EXPORT_SYMBOL

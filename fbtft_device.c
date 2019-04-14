@@ -866,7 +866,7 @@ static struct fbtft_device_display displays[] = {
 		.name = "ili9488",
 		.spi = &(struct spi_board_info) {
 			.modalias = "fb_ili9488",
-			.max_speed_hz = 32000000,
+			.max_speed_hz = 62000000,
 			.mode = SPI_MODE_0,
 			.platform_data = &(struct fbtft_platform_data) {
 				.display = {
@@ -884,6 +884,7 @@ static struct fbtft_device_display displays[] = {
 			}
 		}
 	}, {
+
 		.name = "pitft",
 		.spi = &(struct spi_board_info) {
 			.modalias = "fb_ili9340",

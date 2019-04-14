@@ -31,7 +31,7 @@
 #define WIDTH		320
 #define HEIGHT		480
 #define BPP		16
-#define FPS		30
+#define FPS		60
 
 /* this init sequence matches PiScreen */
 static const s16 default_init_sequence[] = {
