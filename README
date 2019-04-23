@@ -49,3 +49,28 @@ Add the following lines to the [SeatDefaults] section:
 
 # don't sleep the screen
 xserver-command=X -s 0 dpms -nocursor
+
+### ili9806g
+#### Parallel databus Wiring
+
+Display	Driver gpio name	Raspberry Pi	Remark
+VCC							5V		can use 3.3V if R3 is shorted. See schematic
+GND							GND	
+RS		dc		GPIO16			GPIO3 if model B rev 2
+WR		wr		GPIO17			GPIO2 if model B rev 2
+RD							3.3V	
+DB0		db00	GPIO4	
+DB1		db01	GPIO5	
+DB2		db02	GPIO6	
+DB3		db03	GPIO7	
+DB4		db04	GPIO8	
+DB5		db05	GPIO9	
+DB6		db06	GPIO10	
+DB7		db07	GPIO11	
+CS		cs		GPIO12			GPIO27 if model B rev 2
+RST		reset	GPIO13	
+LED		led		GPIO18			Can't drive backlight directly. Use transistor (50mA)
+
+TP_INT			GPIO27
+SDA				GPIO2
+SCL				GPIO3
