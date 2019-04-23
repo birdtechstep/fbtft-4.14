@@ -841,15 +841,14 @@ static struct fbtft_device_display displays[] = {
 			}
 		}
 	}, {
-
-		.name = "piscreen",
+		.name = "ili9488",
 		.spi = &(struct spi_board_info) {
-			.modalias = "fb_ili9486",
-			.max_speed_hz = 32000000,
+			.modalias = "fb_ili9488",
+			.max_speed_hz = 62000000,
 			.mode = SPI_MODE_0,
 			.platform_data = &(struct fbtft_platform_data) {
 				.display = {
-					.regwidth = 16,
+					.regwidth = 8,
 					.buswidth = 8,
 					.backlight = 1,
 				},
@@ -857,9 +856,43 @@ static struct fbtft_device_display displays[] = {
 				.gpios = (const struct fbtft_gpio []) {
 					{ "reset", 25 },
 					{ "dc", 24 },
-					{ "led", 22 },
+					{ "led", 18 },
 					{},
 				},
+			}
+		}
+	}, {
+		.name = "ili9806",
+		.pdev = &(struct platform_device) {
+			.name = "fb_ili9806",
+			.id = 0,
+			.dev = {
+			.release = fbtft_device_pdev_release,
+			.platform_data = &(struct fbtft_platform_data) {
+				.display = {
+					.regwidth = 8,
+					.buswidth = 8,
+					.backlight = 1,
+					.fps = 30,
+				},
+				.bgr = false,
+				.gpios = (const struct fbtft_gpio []) {
+					{ "reset", 13 },
+					{ "dc", 16 },
+					{ "wr", 17 },
+					{ "cs", 12 },
+					{ "db00", 4 },
+					{ "db01", 5 },
+					{ "db02", 6 },
+					{ "db03", 7 },
+					{ "db04", 8 },
+					{ "db05", 9 },
+					{ "db06", 10 },
+					{ "db07", 11 },
+					{ "led", 18 },
+					{},
+				},
+			},
 			}
 		}
 	}, {
@@ -884,7 +917,61 @@ static struct fbtft_device_display displays[] = {
 			}
 		}
 	}, {
-
+		.name = "ili9806",
+		.pdev = &(struct platform_device) {
+			.name = "fb_ili9806",
+			.id = 0,
+			.dev = {
+			.release = fbtft_device_pdev_release,
+			.platform_data = &(struct fbtft_platform_data) {
+				.display = {
+					.regwidth = 8,
+					.buswidth = 8,
+					.backlight = 1,
+					.fps = 30,
+				},
+				.bgr = false,
+				.gpios = (const struct fbtft_gpio []) {
+					{ "reset", 13 },
+					{ "dc", 16 },
+					{ "wr", 17 },
+					{ "cs", 12 },
+					{ "db00", 4 },
+					{ "db01", 5 },
+					{ "db02", 6 },
+					{ "db03", 7 },
+					{ "db04", 8 },
+					{ "db05", 9 },
+					{ "db06", 10 },
+					{ "db07", 11 },
+					{ "led", 18 },
+					{},
+				},
+			},
+			}
+		}
+	}, {
+		.name = "piscreen",
+		.spi = &(struct spi_board_info) {
+			.modalias = "fb_ili9486",
+			.max_speed_hz = 32000000,
+			.mode = SPI_MODE_0,
+			.platform_data = &(struct fbtft_platform_data) {
+				.display = {
+					.regwidth = 16,
+					.buswidth = 8,
+					.backlight = 1,
+				},
+				.bgr = true,
+				.gpios = (const struct fbtft_gpio []) {
+					{ "reset", 25 },
+					{ "dc", 24 },
+					{ "led", 22 },
+					{},
+				},
+			}
+		}
+	}, {
 		.name = "pitft",
 		.spi = &(struct spi_board_info) {
 			.modalias = "fb_ili9340",
