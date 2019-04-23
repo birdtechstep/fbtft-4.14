@@ -2,6 +2,7 @@
  * FB driver for the ILI9488 LCD Controller
  *
  * Copyright (C) 2014 Noralf Tronnes
+ * Copyright (C) 2019 BIRD TECHSTEP
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -185,5 +186,5 @@ MODULE_ALIAS("spi:ili9488");
 MODULE_ALIAS("platform:ili9488");
 
 MODULE_DESCRIPTION("FB driver for the ILI9488 LCD Controller");
-MODULE_AUTHOR("Noralf Tronnes");
+MODULE_AUTHOR("BIRD TECHSTEP");
 MODULE_LICENSE("GPL");
